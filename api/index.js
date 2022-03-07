@@ -4,11 +4,9 @@ const got = require('got');
 
 module.exports = async (req, res) => {
   try {
-    const { user, size } = req.query;
-    const GITHUB_URL = `https://github.com/${user}.png${
-      size ? `?size=${size}` : ''
-    }`;
-    const imageRequest = got(GITHUB_URL);
+    const { i } = req.query;
+    const URL = i;
+    const imageRequest = got(URL);
 
     // Use the `got` promises to:
     //   1. receive the content type via `imageResponse`
