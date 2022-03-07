@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
     // There might be better configurations, but it does the trick for now
     // 
     // Read more: https://vercel.com/docs/concepts/functions/edge-caching
-    res.setHeader('Cache-Control', 's-maxage=43200');
+    res.setHeader('Cache-Control', 's-maxage=86400');
     res.setHeader('content-type', imageResponse.headers['content-type']);
     res.send(imageBuffer);
   } catch (error) {
