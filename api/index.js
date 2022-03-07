@@ -1,6 +1,6 @@
 
 // `got` streamlines Node.js request handling
-const got = import('got');
+const got = require('got');
 
 module.exports = async (req, res) => {
   try {
