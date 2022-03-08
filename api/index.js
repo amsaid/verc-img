@@ -5,7 +5,7 @@ const got = require('got');
 module.exports = async (req, res) => {
   try {
     const { i } = req.query;
-    const URL = i;
+    const URL = 'https://i.imgur.com/'+i;
     const imageRequest = got(URL);
 
     // Use the `got` promises to:
